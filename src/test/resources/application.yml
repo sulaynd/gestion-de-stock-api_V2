@@ -1,0 +1,35 @@
+
+spring:
+ datasource:
+  platform: h2
+  initialization-mode: always
+
+ jpa:
+  show-sql: false
+  hibernate:
+   ddl-auto: update
+  database-platform: org.hibernate.dialect.H2Dialect
+
+jdbc:
+ driverClassName: org.h2.Driver
+ url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1
+ user: test
+ pass: test
+
+
+server:
+ port: 8081
+ address: localhost
+
+flickr:
+ apiKey: e6017aef7bebeffc113de04efec554b4
+ apiSecret: a2e10f69ece5c67c
+ appKey: 72157718699655397-a36ae267891db7e7
+ appSecret: 04e870e57e18c55b
+
+jwt:
+ secretKey: secret
+ timeInMs: 1000
+ timeInHour: 1
+ timeInMinute: 60
+ timeExpired: 1
